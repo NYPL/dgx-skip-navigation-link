@@ -23,7 +23,6 @@
     "url": "https://bitbucket.org/NYPL/dgx-booklist-component/issues"
   },
   "dependencies": {
-    "axios": "^0.7.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.30",
