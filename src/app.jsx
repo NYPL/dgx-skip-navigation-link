@@ -4,4 +4,4 @@ import SkipNavigationLink from './component.jsx';
 /* app.jsx
  * Used for local development of React Components
  */
-React.render(<SkipNavigationLink />, document.body);
+React.render(<SkipNavigationLink target='content'/>, document.getElementById('component'));
