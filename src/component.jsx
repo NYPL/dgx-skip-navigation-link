@@ -19,7 +19,7 @@ class SkipNavigation extends React.Component {
   render() {
     if (this.props.target) {
       return (
-	<a id={this.props.id} href={"#" + this.props.target}>
+	<a id={this.props.id} href={'#' + this.props.target}>
 	{this.props.linkText}
 	</a>
       );
