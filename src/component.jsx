@@ -43,7 +43,7 @@ SkipNavigation.propTypes = {
 SkipNavigation.defaultProps = {
   id: 'skip',
   lang: 'en',
-  linkText: 'Skipp to Main Content',
+  linkText: 'Skip to Main Content',
 };
 
 export default SkipNavigation;
