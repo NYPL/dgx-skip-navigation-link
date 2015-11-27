@@ -54,7 +54,12 @@ const styles = {
     width: '1px',
     height: '1px',
     overflow: 'hidden',
+    ':focus': {
+      left: 'auto',
+      width: 'auto',
+      height: 'auto',
+    },
   },
 }
 
-export default SkipNavigation;
+export default Radium(SkipNavigation);
