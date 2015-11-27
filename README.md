@@ -13,7 +13,7 @@ readers. See
 The skip navigation link must be the first link on the page so that if the user
 presses their TAB key, the link will be first in order to be focused. If the
 target of the link is not naturally focusable, as a div is not, it should be
-given a tabindex of -1. This allows the element to receive programmatic focus
+given a tabindex of −1. This allows the element to receive programmatic focus
 while being ignored during normal navigation flow -- i.e. a user cannot tab to
 the element with the keyboard, but focus can be given to it by action such as
 clicking a skip navigation link. When the element receives focus, this indicates
