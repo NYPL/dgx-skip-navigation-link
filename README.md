@@ -33,7 +33,7 @@ to screen readers that the contents of the element should be read. See
 If no `target` is provided, an empty span will be output rather than a skip
 navigation link since it no link would be better than a broken one.
 
-## Accesibility
+## Accessibility
 
 The method of visually hiding the link is that recommended by
 [CSS in Action: Invisible Content Just for Screen Reader Users](http://webaim.org/techniques/css/invisiblecontent/). When
