@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 
 class SkipNavigation extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class SkipNavigation extends React.Component {
   render() {
     if (this.props.target) {
       return (
-	<a id={this.props.id} href={'#' + this.props.target}>
+	<a id={this.props.id} href={'#' + this.props.target} style={styles.visuallyHidden}>
 	{this.props.linkText}
 	</a>
       );
@@ -44,5 +45,16 @@ SkipNavigation.defaultProps = {
   lang: 'en',
   linkText: 'Skip to Main Content',
 };
+
+const styles = {
+  visuallyHidden: {
+    position: 'absolute',
+    left: '-10000px',
+    top: 'auto',
+    width: '1px',
+    height: '1px',
+    overflow: 'hidden',
+  },
+}
 
 export default SkipNavigation;
