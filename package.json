@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/NYPL/dgx-booklist-component.git"
+    "url": "https://bitbucket.org/NYPL/dgx-skip-navigation-link.git"
   },
   "keywords": [
     "webpack",
@@ -20,7 +20,7 @@
     "accessibility"
   ],
   "bugs": {
-    "url": "https://bitbucket.org/NYPL/dgx-booklist-component/issues"
+    "url": "https://bitbucket.org/NYPL/dgx-skip-navigation-link/issues"
   },
   "dependencies": {
   },
