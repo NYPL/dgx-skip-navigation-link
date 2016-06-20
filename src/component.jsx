@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'react-dom';
 import Radium from 'radium';
 
 class SkipNavigation extends React.Component {
