@@ -20,8 +20,8 @@ const styles = {
 const SkipNavigation = (props) => {
   if (props.target) {
     return (
-      <div id={props.id} style={styles.visuallyHidden} tabIndex='-1'>
-        <a href={'#' + props.target} >
+      <div id={props.id} style={styles.visuallyHidden} tabIndex="-1">
+        <a href={`#${props.target}`} >
           {props.linkText}
         </a>
         <a href={props.a11yLink} >
