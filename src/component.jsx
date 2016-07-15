@@ -24,8 +24,8 @@ const SkipNavigation = (props) => {
         <a href={'#' + props.target} >
           {props.linkText}
         </a>
-        <a href={'#' + props.target} >
-          Other content
+        <a href={props.a11yLink} >
+          {props.a11yText}
         </a>
       </div>
     );
@@ -49,6 +49,8 @@ SkipNavigation.defaultProps = {
   id: 'skip',
   lang: 'en',
   linkText: 'Skip to Main Content',
+  a11yText: 'Click to learn about accessibility at the Library',
+  a11yLink: '//www.nypl.org/accessibility',
 };
 
 export default Radium(SkipNavigation);
