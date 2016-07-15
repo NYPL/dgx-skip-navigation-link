@@ -20,7 +20,7 @@ clicking a skip navigation link. When the element receives focus, this indicates
 to screen readers that the contents of the element should be read. See
 [Keyboard Accessibility: Tabindex](http://webaim.org/techniques/keyboard/tabindex).
 
-The component include both a link a skip navigation link and a link the main NYPL Accessibility page.
+The component includes both a link a skip navigation link and a link the main NYPL Accessibility page.
 
 ## Props
 
