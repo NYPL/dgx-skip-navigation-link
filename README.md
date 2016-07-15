@@ -20,6 +20,8 @@ clicking a skip navigation link. When the element receives focus, this indicates
 to screen readers that the contents of the element should be read. See
 [Keyboard Accessibility: Tabindex](http://webaim.org/techniques/keyboard/tabindex).
 
+The component include both a link a skip navigation link and a link the main NYPL Accessibility page.
+
 ## Props
 
 - `id`: ID of the skip navigation link element (String, default: "skip")
@@ -29,6 +31,8 @@ to screen readers that the contents of the element should be read. See
   Content")
 - `target`: ID of the element to focus when the link is activated (String,
   REQUIRED)
+  a11yText: Text for link to main NYPL Accessibility page,
+  a11yLink: URL of main NYPL Accessibility page,
 
 If no `target` is provided, an empty span will be output rather than a skip
 navigation link since it no link would be better than a broken one.

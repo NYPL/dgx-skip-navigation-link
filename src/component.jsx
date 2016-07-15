@@ -20,7 +20,7 @@ const styles = {
 const SkipNavigation = (props) => {
   if (props.target) {
     return (
-      <div id={props.id} style={styles.visuallyHidden}>
+      <div id={props.id} style={styles.visuallyHidden} tabIndex='-1'>
         <a href={'#' + props.target} >
           {props.linkText}
         </a>
@@ -42,6 +42,8 @@ SkipNavigation.propTypes = {
   lang: React.PropTypes.string,
   linkText: React.PropTypes.string,
   target: React.PropTypes.string.isRequired,
+  a11yText: React.PropTypes.string,
+  a11yLink: React.PropTypes.string,
 };
 
 
