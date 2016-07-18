@@ -20,9 +20,14 @@ const styles = {
 const SkipNavigation = (props) => {
   if (props.target) {
     return (
-      <a id={props.id} href={'#' + props.target} style={styles.visuallyHidden}>
-      {props.linkText}
-      </a>
+      <div id={props.id} style={styles.visuallyHidden} tabIndex="-1">
+        <a href={`#${props.target}`} >
+          {props.linkText}
+        </a>
+        <a href={props.a11yLink} >
+          {props.a11yText}
+        </a>
+      </div>
     );
   }
 
@@ -37,6 +42,8 @@ SkipNavigation.propTypes = {
   lang: React.PropTypes.string,
   linkText: React.PropTypes.string,
   target: React.PropTypes.string.isRequired,
+  a11yText: React.PropTypes.string,
+  a11yLink: React.PropTypes.string,
 };
 
 
@@ -44,6 +51,8 @@ SkipNavigation.defaultProps = {
   id: 'skip',
   lang: 'en',
   linkText: 'Skip to Main Content',
+  a11yText: 'Click to learn about accessibility at the Library',
+  a11yLink: '//www.nypl.org/accessibility',
 };
 
 export default Radium(SkipNavigation);
