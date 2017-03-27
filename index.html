@@ -3,25 +3,28 @@
 	<title>Demo of skip navigation link component</title>
 </head>
 <style>
-	#skip {
-		position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-	}
 
 	#skip a {
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 		display: block;
 		color: #1b7fa7;
 	}
 
-	#skip:focus {
+	#skip a:active, #skip a:focus {
 		left: auto;
 		width: auto;
 		height: auto;
-		top: 65px;
+		top: 10px;
+	}
+
+	#main {
+		position: relative;
+		top: 15px
 	}
 </style>
 
@@ -29,7 +32,7 @@
 	<div>
 		<div id="component"></div>
 	</div>
-	<div>
+	<div id="main">
 		<h1>This is the content we want to skip</h1>
 		<ul>
 			<li>Item</li>
