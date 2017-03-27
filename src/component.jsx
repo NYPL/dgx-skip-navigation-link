@@ -3,7 +3,7 @@ import React from 'react';
 const SkipNavigation = (props) => {
   if (props.target) {
     return (
-      <nav id={props.id} aria-label="Skip Navigation">
+      <nav id={props.id} aria-label={props.skipLabel} >
         <ul>
 	  <li>
             <a href={`#${props.target}`} >
@@ -32,6 +32,7 @@ SkipNavigation.propTypes = {
   target: React.PropTypes.string.isRequired,
   a11yText: React.PropTypes.string,
   a11yLink: React.PropTypes.string,
+  skipLabel: React.PropTypes.string,
 };
 
 
@@ -41,6 +42,7 @@ SkipNavigation.defaultProps = {
   linkText: 'Skip to Main Content',
   a11yText: 'Click to learn about accessibility at the Library',
   a11yLink: '//www.nypl.org/accessibility',
+  skipLabel: 'Skip Navigation',
 };
 
 export default SkipNavigation;
