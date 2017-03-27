@@ -3,14 +3,20 @@ import React from 'react';
 const SkipNavigation = (props) => {
   if (props.target) {
     return (
-      <div id={props.id} tabIndex="-1">
-        <a href={`#${props.target}`} >
-          {props.linkText}
-        </a>
-        <a href={props.a11yLink} >
-          {props.a11yText}
-        </a>
-      </div>
+      <nav id={props.id} aria-label="Skip Navigation">
+        <ul>
+	  <li>
+            <a href={`#${props.target}`} >
+              {props.linkText}
+            </a>
+	  </li>
+	  <li>
+            <a href={props.a11yLink} >
+              {props.a11yText}
+            </a>
+          </li>
+        </ul>
+      </nav>
     );
   }
   // If the target is not set, it is better to have no skip navigation link
