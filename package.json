@@ -1,6 +1,6 @@
 {
   "name": "dgx-skip-navigation-link",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "React Skip Navigation Link",
   "main": "./dist/index.min.js",
   "scripts": {

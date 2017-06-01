@@ -6,6 +6,6 @@ import SkipNavigation from './component.jsx';
  * Used for local development of React Components
  */
 render(
-	<SkipNavigation target="main"/>,
-	document.getElementById('component')
+  <SkipNavigation target="main" />,
+  document.getElementById('component')
 );
