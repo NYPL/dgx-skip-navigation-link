@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SkipNavigation = (props) => {
   if (props.target) {
@@ -20,12 +21,12 @@ const SkipNavigation = (props) => {
 
 
 SkipNavigation.propTypes = {
-  id: React.PropTypes.string,
-  lang: React.PropTypes.string,
-  linkText: React.PropTypes.string,
-  target: React.PropTypes.string.isRequired,
-  a11yText: React.PropTypes.string,
-  a11yLink: React.PropTypes.string,
+  id: PropTypes.string,
+  lang: PropTypes.string,
+  linkText: PropTypes.string,
+  target: PropTypes.string.isRequired,
+  a11yText: PropTypes.string,
+  a11yLink: PropTypes.string,
 };
 
 
