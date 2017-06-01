@@ -4,14 +4,20 @@ import PropTypes from 'prop-types';
 const SkipNavigation = (props) => {
   if (props.target) {
     return (
-      <div id={props.id} tabIndex="-1">
-        <a href={`#${props.target}`} >
-          {props.linkText}
-        </a>
-        <a href={props.a11yLink} >
-          {props.a11yText}
-        </a>
-      </div>
+      <nav id={props.id} aria-label={props.skipLabel} >
+        <ul>
+          <li>
+            <a href={`#${props.target}`}>
+              {props.linkText}
+            </a>
+          </li>
+          <li>
+            <a href={props.a11yLink}>
+              {props.a11yText}
+            </a>
+          </li>
+        </ul>
+      </nav>
     );
   }
   // If the target is not set, it is better to have no skip navigation link
@@ -27,6 +33,7 @@ SkipNavigation.propTypes = {
   target: PropTypes.string.isRequired,
   a11yText: PropTypes.string,
   a11yLink: PropTypes.string,
+  skipLabel: PropTypes.string,
 };
 
 
@@ -36,6 +43,7 @@ SkipNavigation.defaultProps = {
   linkText: 'Skip to Main Content',
   a11yText: 'Click to learn about accessibility at the Library',
   a11yLink: '//www.nypl.org/accessibility',
+  skipLabel: 'Skip Navigation',
 };
 
 export default SkipNavigation;

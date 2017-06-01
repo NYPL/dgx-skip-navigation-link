@@ -1,27 +1,35 @@
-<html>
+<html lang="en">
 <head>
 	<title>Demo of skip navigation link component</title>
 </head>
 <style>
-	#skip {
-		position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+	#skip ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
 	}
 
 	#skip a {
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 		display: block;
 		color: #1b7fa7;
 	}
 
-	#skip:focus {
+	#skip a:active, #skip a:focus {
 		left: auto;
 		width: auto;
 		height: auto;
-		top: 65px;
+		top: 10px;
+	}
+
+	#main {
+		position: relative;
+		top: 15px
 	}
 </style>
 
@@ -29,7 +37,7 @@
 	<div>
 		<div id="component"></div>
 	</div>
-	<div>
+	<div id="notmain">
 		<h1>This is the content we want to skip</h1>
 		<ul>
 			<li>Item</li>
@@ -79,8 +87,8 @@
 		</ul>
 	</div>
 
-	<div id="content" tabindex="-1">
-		<h1>This is the content we want to read</h1>
+	<main id="main" aria-labelledby="mainheading">
+		<h1 id="mainheading">This is the content we want to read</h1>
 
 		<p>This is the main target. It has to have a tabindex set to −1 in order for screenreaders to recognize the content as something that should be read aloud.
 		</p>
