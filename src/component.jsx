@@ -1,17 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SkipNavigation = (props) => {
   if (props.target) {
     return (
       <nav id={props.id} aria-label={props.skipLabel} >
         <ul>
-	  <li>
-            <a href={`#${props.target}`} >
+          <li>
+            <a href={`#${props.target}`}>
               {props.linkText}
             </a>
-	  </li>
-	  <li>
-            <a href={props.a11yLink} >
+          </li>
+          <li>
+            <a href={props.a11yLink}>
               {props.a11yText}
             </a>
           </li>
@@ -26,13 +27,13 @@ const SkipNavigation = (props) => {
 
 
 SkipNavigation.propTypes = {
-  id: React.PropTypes.string,
-  lang: React.PropTypes.string,
-  linkText: React.PropTypes.string,
-  target: React.PropTypes.string.isRequired,
-  a11yText: React.PropTypes.string,
-  a11yLink: React.PropTypes.string,
-  skipLabel: React.PropTypes.string,
+  id: PropTypes.string,
+  lang: PropTypes.string,
+  linkText: PropTypes.string,
+  target: PropTypes.string.isRequired,
+  a11yText: PropTypes.string,
+  a11yLink: PropTypes.string,
+  skipLabel: PropTypes.string,
 };
 
 
