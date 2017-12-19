@@ -4,16 +4,11 @@ import PropTypes from 'prop-types';
 const SkipNavigation = (props) => {
   if (props.target) {
     return (
-      <nav id={props.id} aria-label={props.skipLabel} >
+      <nav id={props.id} aria-label={props.skipLabel}>
         <ul>
           <li>
             <a href={`#${props.target}`}>
               {props.linkText}
-            </a>
-          </li>
-          <li>
-            <a href={props.a11yLink}>
-              {props.a11yText}
             </a>
           </li>
         </ul>
