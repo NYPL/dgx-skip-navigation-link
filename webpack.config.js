@@ -17,7 +17,8 @@ if (process.env.NODE_ENV !== 'development') {
       // export itself to a UMD require library convention
       libraryTarget: "umd",
       // name of the global var
-      library: "dgxSkipNavigationLink"
+      library: "dgxSkipNavigationLink",
+      globalObject: "this",
     },
     externals: {
       // Required in order to ignore library within other components
