@@ -3,9 +3,9 @@
  * Used for local development of React Components.
  */
 var webpack = require('webpack'),
-	WebpackDevServer = require('webpack-dev-server'),
-	config = require('./webpack.config'),
-	pkg = require('./package.json');
+  WebpackDevServer = require('webpack-dev-server'),
+  config = require('./webpack.config'),
+  pkg = require('./package.json');
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,

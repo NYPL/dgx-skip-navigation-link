@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var cleanBuild = require('clean-webpack-plugin');
+var { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var rootPath = path.resolve(__dirname);
 
 if (process.env.NODE_ENV !== 'development') {
@@ -9,15 +9,16 @@ if (process.env.NODE_ENV !== 'development') {
       path.resolve(rootPath, 'src/component.jsx')
     ],
     resolve: {
-      extensions: ['', '.js', '.jsx']
+      extensions: ['*', '.js', '.jsx']
     },
     output: {
       path: path.join(__dirname, 'dist'),
       filename: 'index.min.js',
       // export itself to a UMD require library convention
-      libraryTarget: "umd",
+      libraryTarget: 'umd',
       // name of the global var
-      library: "dgxSkipNavigationLink"
+      library: 'dgxSkipNavigationLink',
+      globalObject: 'this',
     },
     externals: {
       // Required in order to ignore library within other components
@@ -29,19 +30,22 @@ if (process.env.NODE_ENV !== 'development') {
       }
     },
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
-          loader: 'babel',
-          query: {
-            presets: ['es2015', 'react']
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ]
           },
         }
       ]
     },
     plugins: [
-      new cleanBuild(['dist'])
+      new CleanWebpackPlugin()
     ]
   };
 } else {
@@ -58,20 +62,23 @@ if (process.env.NODE_ENV !== 'development') {
       publicPath: '/static/'
     },
     plugins: [
-      new cleanBuild(['dist']),
+      new CleanWebpackPlugin(),
       new webpack.HotModuleReplacementPlugin()
     ],
     resolve: {
-      extensions: ['', '.js', '.jsx']
+      extensions: ['*', '.js', '.jsx']
     },
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
-          loader: ['babel'],
-          query: {
-            presets: ['react', 'es2015']
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ]
           }
         }
       ]
