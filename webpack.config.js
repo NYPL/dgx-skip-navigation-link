@@ -15,10 +15,10 @@ if (process.env.NODE_ENV !== 'development') {
       path: path.join(__dirname, 'dist'),
       filename: 'index.min.js',
       // export itself to a UMD require library convention
-      libraryTarget: "umd",
+      libraryTarget: 'umd',
       // name of the global var
-      library: "dgxSkipNavigationLink",
-      globalObject: "this",
+      library: 'dgxSkipNavigationLink',
+      globalObject: 'this',
     },
     externals: {
       // Required in order to ignore library within other components
